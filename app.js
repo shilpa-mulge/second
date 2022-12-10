@@ -1,5 +1,5 @@
 //call
-var obj={num:2};
+/* var obj={num:2};
 var addToThis=function(a,b,c){
     return this.num+a+b+c;
 }
@@ -51,4 +51,15 @@ let mul2=multiply(2);
 mul2(3);
 
 let mul3=multiply(3);
-mul3(3);
+mul3(3); */
+
+//currying
+
+function add(val){
+    return (val2)=>{
+       return val+val2;
+    }
+}
+console.log(add(3)(3));
+var a=add(3);
+console.log(a(3))
